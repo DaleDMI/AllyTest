@@ -2,10 +2,8 @@ package dale;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class KthLargestInteger {
 
@@ -27,6 +25,7 @@ public class KthLargestInteger {
         System.out.println("kth Largest: " + kthLargest);
     }
 
+    // Uses dual-pivot quicksort
     private static int getKthLargestInteger(String listOfInts, int k) {
         List<Integer> arrOfInts = Arrays.stream(listOfInts.split(","))
                 .map(Integer::valueOf)
