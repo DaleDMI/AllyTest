@@ -22,6 +22,24 @@ public class SmallestGoodBase {
         System.out.println("Smallest Good Base: " + smallestGoodBase);
     }
 
+    /*
+        n = k^0 + k^1 + ... k^m
+
+        min # digits 2
+        n(10) = 11(n-1)
+
+        max # digits sqr(n) rounded down +1
+        33(10) will have a maximum of 6 digits and minimum of 2 digits
+
+        n(10) = 1 + b + b^2 + ... b ^ (floor(sqr(n)) + 1)
+
+                      = 3^0 + 3^1 + 3^2 + 3^3
+                          1     4    16         64
+        31(10) = m(4) = 4^0 + 4^1 + 4^2 but not 4^3
+        31(10) = u(5) = 5^0 + 5^1 + 5^2   !!!!
+                      = 6^0 + 6^1
+                      = 30^0 + 30^1
+     */
     private static BigInteger getSmallestGoodBase(BigInteger n) {
         BigInteger largestBase = n.subtract(BigInteger.ONE);
         BigInteger smallestGoodBase = largestBase;
