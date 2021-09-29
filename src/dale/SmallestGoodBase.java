@@ -29,7 +29,7 @@ public class SmallestGoodBase {
         n(10) = 11(n-1)
 
         max # digits sqr(n) rounded down +1
-        33(10) will have a maximum of 6 digits and minimum of 2 digits
+        31(10) will have a potential maximum of 6 digits and minimum of 2 digits
 
         n(10) = 1 + b + b^2 + ... b ^ (floor(sqr(n)) + 1)
 
